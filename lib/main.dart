@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prac5/features/orders/presentation/screens/order_screen.dart';
+import 'package:prac5/features/orders/presentation/screens/order_home_screen.dart';
 
 void main() {
   runApp(const OrderApp());
@@ -14,7 +14,7 @@ class OrderApp extends StatelessWidget {
       title: 'Учёт заказов ресторана',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.red),
-      home: const OrderScreen(),
+      home: const OrderHomeScreen(),
     );
   }
 }

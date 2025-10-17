@@ -10,4 +10,6 @@ class OrderRepository {
   void removeOrder(Order order) => _orders.remove(order);
 
   double getTotalSum() => _orders.fold(0, (sum, o) => sum + o.total);
+
+  void clearOrders() => _orders.clear(); // <--- новый метод
 }
