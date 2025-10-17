@@ -11,5 +11,5 @@ class OrderRepository {
 
   double getTotalSum() => _orders.fold(0, (sum, o) => sum + o.total);
 
-  void clearOrders() => _orders.clear(); // <--- новый метод
+  void clearOrders() => _orders.clear();
 }

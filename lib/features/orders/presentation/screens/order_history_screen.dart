@@ -8,7 +8,7 @@ class OrderHistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final history = service.orderHistory; // <-- использован геттер
+    final history = service.orderHistory;
 
     return Scaffold(
       appBar: AppBar(title: const Text("История заказов")),

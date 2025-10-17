@@ -24,8 +24,8 @@ class OrderService {
   void payOrder() {
     final currentOrders = _repository.getAll();
     if (currentOrders.isNotEmpty) {
-      _orderHistory.add(List.from(currentOrders)); // копируем текущие заказы
-      _repository.clearOrders(); // очищаем список
+      _orderHistory.add(List.from(currentOrders));
+      _repository.clearOrders();
     }
   }
 }

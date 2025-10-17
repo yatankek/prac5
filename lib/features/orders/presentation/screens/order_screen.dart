@@ -28,7 +28,7 @@ class _OrderScreenState extends State<OrderScreen> {
 
   void _payOrder() {
     setState(() {
-      widget.service.payOrder(); // перенос в историю и очистка списка
+      widget.service.payOrder();
     });
     ScaffoldMessenger.of(context)
         .showSnackBar(const SnackBar(content: Text("Заказ оформлен!")));
@@ -45,7 +45,7 @@ class _OrderScreenState extends State<OrderScreen> {
         orders.isEmpty
             ? const EmptyState()
             : OrderList(orders: orders, onRemove: _removeOrder),
-        OrderSummary(total: total, onPay: _payOrder), // кнопка "история" убрана
+        OrderSummary(total: total, onPay: _payOrder),
       ],
     );
   }

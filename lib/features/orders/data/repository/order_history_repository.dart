@@ -7,7 +7,7 @@ class OrderHistoryRepository {
 
   void addOrdersToHistory(List<Order> orders) {
     if (orders.isNotEmpty) {
-      _history.add(List<Order>.from(orders)); // сохраняем копию списка
+      _history.add(List<Order>.from(orders));
     }
   }
 }
