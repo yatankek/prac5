@@ -39,14 +39,19 @@ class _OrderScreenState extends State<OrderScreen> {
     final orders = widget.service.orders;
     final total = widget.service.getTotalSum();
 
-    return Column(
-      children: [
-        OrderForm(onAdd: _addOrder),
-        orders.isEmpty
-            ? const EmptyState()
-            : OrderList(orders: orders, onRemove: _removeOrder),
-        OrderSummary(total: total, onPay: _payOrder),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Текущие заказы"),
+      ),
+      body: Column(
+        children: [
+          OrderForm(onAdd: _addOrder),
+          orders.isEmpty
+              ? const EmptyState()
+              : OrderList(orders: orders, onRemove: _removeOrder),
+          OrderSummary(total: total, onPay: _payOrder),
+        ],
+      ),
     );
   }
 }
